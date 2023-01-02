@@ -1,0 +1,30 @@
+body{
+    background-color:bisque;
+}
+
+
+.container{
+    border: 3px solid rgb(99, 93, 93);
+    position: absolute;
+    background: transparent;
+
+}
+
+.button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: rgb(134, 130, 130);
+    font-size: 20px;
+    border-radius: 5px;
+
+} 
+
+.hasil{
+    width: 170px;
+    height: 40px;
+    font-size: 20px;
+    color: black;
+    text-align: right;
+}
