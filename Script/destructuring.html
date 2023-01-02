@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        {
+        const names = ["Kholifah", "Akbar", "Babelan", "Budi", "rio"];
+        let [firstName, middleName, lastName, ...other] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(other);
+        }
+        {
+        const person = {
+            firstName: "Eko",
+            lastName: "Khanedy",
+            address: {
+                street: "Jalan belum ada",
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Game",
+            channel: "Belum ada",
+        };
+        let {firstName, lastName, address, ...other} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(address);
+        console.info(other)
+    }
+
+
+    {
+
+        function displayPerson({firstName, middleName, lastName}){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+        const person = {
+            firstName: "Akbar",
+            middleName: "Babelan",
+            lastName: "Musthofa",
+        };
+
+        displayPerson(person);
+    }
+
+    {
+    function sum([first, second]){
+    return first + second;
+    }
+
+    console.info(sum([1, 1]));
+    console.info(sum([20, 29]));
+    }
+
+
+    {
+        const names = ["AKBAR"];
+        const[firstName, middleName, lastName = "Musthofa"] = names;
+
+        console.info(firstName)
+        console.info(middleName);
+        console.info(lastName);
+    }
+
+    {
+        const person ={
+            firstName: "Akbar",
+            middleName: "Babelan",
+            lastName: "Musthofa"
+        };
+        let {firstName: namaDepan,
+            middleName: namaTengah,
+            lastName: namaBelakang} = person;
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+                
+        }
+    </script>
+    
+</body>
+</html>
